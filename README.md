@@ -33,6 +33,8 @@ The following EXTRA features are implemented:
 ## Video Demo
 
 Here's a video / GIF that demos all of the app's implemented features:
+I don't know why the gif is not working, so I've included the link
+https://i.imgur.com/LyTANGY.gif
 
 <img src='https://i.imgur.com/LyTANGY.gif' title='Video Demo' width='' alt='Video Demo' />
 
