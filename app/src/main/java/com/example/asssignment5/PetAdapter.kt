@@ -9,14 +9,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.asssignment5.R
 
-class PetAdapter(private val nameList: List<String>, private val URLlist: List<String>): RecyclerView.Adapter<PetAdapter.ViewHolder>() {
+class PetAdapter(private val nameList: List<String>, private val URLlist: List<String>, private val gameIndexList: List<String>): RecyclerView.Adapter<PetAdapter.ViewHolder>() {
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val name : TextView
         val url: TextView
+        val gameIndex: TextView
 
         init {
             name = view.findViewById(R.id.textView)
             url = view.findViewById(R.id.textView2)
+            gameIndex = view.findViewById(R.id.textView3)
         }
     }
 
@@ -33,6 +35,9 @@ class PetAdapter(private val nameList: List<String>, private val URLlist: List<S
         val url = URLlist[position]
         holder.url.text = url
         holder.url.setTextColor(holder.url.context.resources.getColor(android.R.color.holo_blue_light))
+
+        val gameIndex = gameIndexList[position]
+        holder.gameIndex.text = gameIndex
     }
 
     override fun getItemCount() = nameList.size

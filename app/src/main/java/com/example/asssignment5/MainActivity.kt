@@ -16,6 +16,7 @@ import okhttp3.Headers
 class MainActivity : AppCompatActivity() {
     val URLlist = mutableListOf<String>()
     val nameList = mutableListOf<String>()
+    val gameIndexList = mutableListOf<String>()
     private lateinit var rvPets: RecyclerView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +40,13 @@ class MainActivity : AppCompatActivity() {
                     nameList.add(versionName)
                     URLlist.add(versionURL)
                 }
-                val adapter = PetAdapter(nameList, URLlist)
+
+                val gameArray = json.jsonObject.getJSONArray("game_indices")
+                for (i in 0 until gameArray.length()) {
+                    val gameIndex = gameArray.getJSONObject(i).getInt("game_index")
+                    gameIndexList.add(gameIndex.toString())
+                }
+                val adapter = PetAdapter(nameList, URLlist,gameIndexList)
                 rvPets.adapter = adapter
                 rvPets.layoutManager = LinearLayoutManager(this@MainActivity)
                 rvPets.addItemDecoration(DividerItemDecoration(this@MainActivity, LinearLayoutManager.VERTICAL))
