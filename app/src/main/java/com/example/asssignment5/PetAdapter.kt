@@ -34,7 +34,6 @@ class PetAdapter(private val nameList: List<String>, private val URLlist: List<S
 
         val url = URLlist[position]
         holder.url.text = url
-        holder.url.setTextColor(holder.url.context.resources.getColor(android.R.color.holo_blue_light))
 
         val gameIndex = gameIndexList[position]
         holder.gameIndex.text = gameIndex

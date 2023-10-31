@@ -3,6 +3,23 @@
     <style name="Base.Theme.Asssignment5" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name = "colorPrimary">@color/blue</item>
+        <item name = "colorPrimaryVariant">@color/black</item>
+        <item name = "colorSecondary">@color/teal</item>
+        <item name = "colorSecondaryVariant">@color/white</item>
+        <item name = "android:fontFamily">@font/averia_serif_libre_light</item>
+    </style>
+    <style name = "TextAppearance.Quote" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name = "android:textSize">20sp</item>
+        <item name = "android:textColor">@color/teal</item>
+        <item name = "android:padding">8dp</item>
+    </style>
+    <style name = "abc">
+        <item name = "android:textSize">20sp</item>
+        <item name = "android:textColor">@color/sexy_red</item>
+        <item name = "android:padding">8dp</item>
+        <item name = "android:textStyle">bold</item>
+
     </style>
 
     <style name="Theme.Asssignment5" parent="Base.Theme.Asssignment5" />
